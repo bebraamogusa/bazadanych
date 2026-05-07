@@ -1,0 +1,9 @@
+id_planety,id_gwiazdy,nazwa,typ,masa_ziemska,srednica_km,okres_orbitalny_dni,liczba_ksiezyców,srednia_temp_c,atmosfera,czy_zamieszkiwalna,data_odkrycia
+1,3,"Ziemia","Skalista",1.0000,12742,365.25,1,15.00,"Azot, Tlen",1,0
+2,3,"Mars","Skalista",0.1070,6779,687.00,2,-63.00,"Dwutlenek węgla",0,1610
+3,3,"Jowisz","Gazowy olbrzym",317.8000,139820,4332.59,95,-110.00,"Wodór, Hel",0,1610
+4,4,"Proxima b","Skalista",1.1700,13000,11.18,0,-39.00,"Nieznana",1,2016
+5,2,"Rigel Prime","Gazowy olbrzym",320.5000,140000,4500.20,12,-110.00,"Wodór, Hel",0,2045
+6,1,"Betelgeza IV","Karłowata",0.0200,3200,80.00,0,450.00,"Brak",0,2112
+7,5,"Antares b","Gazowy olbrzym",450.0000,160000,25000.00,24,-150.00,"Metan",0,2080
+8,10,"Pegasi 51b","Gazowy olbrzym",0.4700,150000,4.23,0,1000.00,"Sód, Potas",0,1995

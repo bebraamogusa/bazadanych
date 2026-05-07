@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nawigacja Gwiezdna</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/aladin/aladin.v2.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="site-header">
+        <div class="brand">
+          <div class="brand-mark">NG</div>
+          <div>
+            <div class="brand-title">Nawigacja Gwiezdna</div>
+            <div class="brand-subtitle">interaktywna mapa danych misji</div>
+          </div>
+        </div>
+        <div class="status" id="status">ladowanie stanu...</div>
+      </header>
+
+      <main class="grid">
+        <section class="panel map-panel" style="--i: 1">
+          <div class="panel-header">
+            <h2>Mapa Gwiezdna</h2>
+            <div class="legend">
+              <span class="legend-item legend-star">gwiazdy</span>
+              <span class="legend-item legend-planet">planety</span>
+            </div>
+          </div>
+          <div class="map-toolbar">
+            <input
+              id="mapSearch"
+              class="search"
+              type="search"
+              placeholder="szukaj obiektu na mapie"
+            />
+            <button class="btn" id="mapInitBtn" type="button">uruchom mape</button>
+            <button class="btn ghost" id="mapStopBtn" type="button" disabled>pauza</button>
+            <div class="meta" id="mapCount">0 obiektow</div>
+            <div class="meta" id="mapStatus">mapa wylaczona</div>
+          </div>
+          <div class="map-grid">
+            <div id="aladin" class="aladin"></div>
+            <div class="map-info" id="mapInfo">
+              wybierz obiekt z mapy lub listy
+            </div>
+          </div>
+          <ul class="map-list" id="mapList"></ul>
+        </section>
+
+        <section class="panel query-panel" style="--i: 2">
+          <div class="panel-header">
+            <h2>Zestaw Selectow</h2>
+            <span class="badge" id="queryCount">0</span>
+          </div>
+          <input
+            id="querySearch"
+            class="search"
+            type="search"
+            placeholder="filtruj zapytania"
+          />
+          <ul class="query-list" id="queryList"></ul>
+        </section>
+
+        <section class="panel result-panel" style="--i: 3">
+          <div class="panel-header">
+            <h2>Widok Zapytania</h2>
+            <div class="meta" id="activeTitle">brak wyboru</div>
+          </div>
+          <pre class="sql" id="activeSql">wybierz zapytanie po lewej</pre>
+          <div class="result-meta" id="resultMeta"></div>
+          <div class="result-table" id="resultTable"></div>
+        </section>
+
+        <section class="panel schema-panel" style="--i: 4">
+          <div class="panel-header">
+            <h2>Relacje i Struktura</h2>
+          </div>
+          <div class="schema-stats" id="schemaStats"></div>
+          <div class="schema-block">
+            <h3>Tabele</h3>
+            <ul id="tableList"></ul>
+          </div>
+          <div class="schema-block">
+            <h3>Kolumny</h3>
+            <div id="columnDetail" class="column-detail">wybierz tabele</div>
+          </div>
+          <div class="schema-block">
+            <h3>Relacje</h3>
+            <ul id="relationList"></ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/aladin/aladin.v2.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

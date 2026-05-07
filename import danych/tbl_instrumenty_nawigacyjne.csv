@@ -1,0 +1,8 @@
+id_instrumentu,nazwa,typ,producent,model,rok_produkcji,dokladnosc_ly,zasieg_ly,id_statku,stan,cena_PLN
+1,"Sextant Kwantowy","Sextant","Optics Corp","MK-V",2240,0.000001,50.00,1,"Sprawny",150000
+2,"Skaner DeepScan","Skaner","SensorTech","DS-9",2242,0.001000,1000.00,1,"Do kalibracji",1200000
+3,"Kompas Grawitacyjny","Kompas","Corellia Systems","G-North",1975,0.050000,10.00,2,"Sprawny",45000
+4,"Kalkulator Warp","Kalkulatr Warp","Zefram Tech","Cochrane-1",2244,0.000000,5000.00,1,"Sprawny",3000000
+5,"Detektor Materii","Detektor","Tycho Sci","DarkEye",2348,0.000500,2500.00,3,"Uszkodzony",8500000
+6,"System T-Point","System Celowania","Donnager Arms","T-1",2349,0.000010,100.00,3,"Sprawny",500000
+7,"Skaner Kwantowy","Skaner","Alliance","Q-Scan",2510,0.000001,3000.00,5,"Sprawny",4200000

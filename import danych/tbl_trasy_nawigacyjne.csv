@@ -1,0 +1,5 @@
+id_trasy,nazwa,id_misji,punkt_startowy,punkt_koncowy,dlugosc_ly,czas_podrozy_dni,typ_napędu,liczba_etapow,trudnosc,czy_bezpieczna,uwagi
+1,"Szlak Oriona",1,"Ziemia","Proxima b",4.24,180,"Warp",5,"Trudna",0,"Chmury pyłowe"
+2,"Pas Asteroid",2,"Ziemia","Jowisz",0.01,350,"Impuls",10,"Średnia",1,"Gęsty ruch"
+3,"Skok Kwantowy",3,"Tycho","Eros",0.01,14,"Kwantowy",2,"Ekstremalna",0,"Niestabilne pole"
+4,"Wielka Pustka",4,"Ziemia","Sektor 001",1500,2000,"Warp",1,"Łatwa",1,"Czysta przestrzeń"

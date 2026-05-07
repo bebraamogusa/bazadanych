@@ -1,0 +1,18 @@
+{
+  "name": "nawigacja-gwiezdna",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nawigacja gwiezdna - UI + API for the database",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "import:node": "node scripts/import_csv.js"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mysql2": "^3.11.4"
+  }
+}

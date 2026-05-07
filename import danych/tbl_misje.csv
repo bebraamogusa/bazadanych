@@ -1,0 +1,6 @@
+id_misji,nazwa,typ,id_statku,id_nawigatora,id_docelowej_planety,data_startu,data_konca,cel_x_ly,cel_y_ly,cel_z_ly,status,priorytet,wynik,budzet_PLN
+1,"Ekspedycja Alpha","Eksploracja",1,1,4,"2250-01-01","2252-12-31",4.24,0,0,"W trakcie",1,"Poszukiwanie życia",500000000
+2,"Przemyt Paserów","Transport",2,2,3,"2023-05-10",NULL,5.2,1.2,0.5,"Planowana",3,NULL,150000
+3,"Odzysk Pierścienia","Ratunkowa",3,3,5,"2355-11-20","2356-02-15",860,200,-50,"Zakończona",2,"Sukces",12000000
+4,"Deep Space 1","Naukowa",1,5,NULL,"2255-06-01",NULL,1500,1200,800,"Planowana",1,NULL,900000000
+5,"Kolonizacja Marsa","Transport",6,7,2,"2030-01-01",NULL,0.01,0.01,0,"W trakcie",2,NULL,25000000000

@@ -1,0 +1,7 @@
+id_obserwatorium,id_planety,nazwa,lokalizacja,typ,data_zalozenia,srednica_teleskopu_m,dlugosc_geo,szerokosc_geo,aktywne,personel_liczba,budzet_roczny_PLN
+1,1,"Paranal","Atakama, Chile","Naziemne",1999,8.20,-70.404200,-24.627500,1,150,50000000
+2,NULL,"Hubble","Orbita LEO","Orbitalne",1990,2.40,0.000000,0.000000,1,500,2000000000
+3,NULL,"James Webb","Punkt L2","Orbitalne",2021,6.50,0.000000,0.000000,1,1000,4000000000
+4,2,"Ares I","Mars, Utopia","Naziemne",2035,4.00,135.000000,45.000000,1,12,120000000
+5,3,"Stacja IO-X","Orbita Io","Stacja Głęboka",2105,12.00,0.000000,0.000000,1,45,850000000
+6,1,"Góra Fuji","Honshū, Japonia","Naziemne",1960,1.50,138.720000,35.360000,1,20,5000000
