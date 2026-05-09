@@ -1,0 +1,46 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: nawigacja_db
+    restart: unless-stopped
+    command: --local-infile=1
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: nawigacja_gwiezdna
+      MYSQL_USER: nawigacja
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init:/docker-entrypoint-initdb.d:ro
+      - "./import danych:/import_danych:ro"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  app:
+    build:
+      context: ./nawigacja-app
+      dockerfile: Dockerfile
+    container_name: nawigacja_app
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: nawigacja
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: nawigacja_gwiezdna
+      PORT: 3000
+      QUERY_FILE: /data/nawigacja_gwiezdna_select.sql
+    volumes:
+      - "./import danych:/data:ro"
+    ports:
+      - "3000:3000"
+
+volumes:
+  db_data:
