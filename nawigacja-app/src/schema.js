@@ -13,28 +13,34 @@ async function loadSchema(pool) {
 
   const tableMap = new Map();
   for (const row of tables) {
-    tableMap.set(row.table_name, { name: row.table_name, columns: [] });
+    const tableName = row.table_name || row.TABLE_NAME;
+    tableMap.set(tableName, { name: tableName, columns: [] });
   }
 
   for (const col of columns) {
-    const table = tableMap.get(col.table_name);
+    const tableName = col.table_name || col.TABLE_NAME;
+    const columnName = col.column_name || col.COLUMN_NAME;
+    const dataType = col.data_type || col.DATA_TYPE;
+    const isNullable = col.is_nullable || col.IS_NULLABLE;
+
+    const table = tableMap.get(tableName);
     if (!table) {
       continue;
     }
     table.columns.push({
-      name: col.column_name,
-      type: col.data_type,
-      nullable: col.is_nullable === "YES"
+      name: columnName,
+      type: dataType,
+      nullable: isNullable === "YES"
     });
   }
 
   return {
     tables: Array.from(tableMap.values()),
     relations: relations.map((rel) => ({
-      fromTable: rel.from_table,
-      fromColumn: rel.from_column,
-      toTable: rel.to_table,
-      toColumn: rel.to_column
+      fromTable: rel.from_table || rel.FROM_TABLE,
+      fromColumn: rel.from_column || rel.FROM_COLUMN,
+      toTable: rel.to_table || rel.TO_TABLE,
+      toColumn: rel.to_column || rel.TO_COLUMN
     }))
   };
 }

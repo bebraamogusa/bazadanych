@@ -56,6 +56,7 @@ app.get("/api/queries/:id", async (req, res) => {
       fields: fields.map((field) => ({ name: field.name }))
     });
   } catch (error) {
+    console.error("[/api/queries/:id] Error:", error);
     res.status(500).json({ error: "query_failed" });
   }
 });
@@ -65,6 +66,7 @@ app.get("/api/schema", async (req, res) => {
     const schema = await loadSchema(pool);
     res.json(schema);
   } catch (error) {
+    console.error("[/api/schema] Error:", error);
     res.status(500).json({ error: "schema_failed" });
   }
 });
@@ -74,7 +76,8 @@ app.get("/api/map", async (req, res) => {
     const items = await loadMapData(pool);
     res.json({ total: items.length, items });
   } catch (error) {
-    res.status(500).json({ error: "map_failed" });
+    console.error("[/api/map] Error:", error);
+    res.status(500).json({ error: "map_failed", message: error.message });
   }
 });
 
