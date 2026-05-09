@@ -1,0 +1,31 @@
+id_nawigatora,imie,nazwisko,data_urodzenia,stopien,specjalizacja,lata_doswiadczenia,certyfikat_nr,aktywny,id_statku
+1,"James","Kirk","2233-03-22","Kapitan Nawigator","Warp",25,"NAV-001-0001",1,1
+2,"Han","Solo","1977-05-04","Starszy Nawigator","Hiperskok",30,"NAV-002-0002",1,2
+3,"Alex","Kamal","2310-07-18","Nawigator","Nawigacja Gwiezdna",10,"NAV-003-0003",1,3
+4,"Ellen","Ripley","2092-01-07","Kadet","Warp",2,"NAV-004-0004",0,4
+5,"Dave","Bowman","1999-12-01","Admirał","Wielofazowa",38,"NAV-005-0005",0,5
+6,"Mark","Watney","2030-10-14","Nawigator","Nawigacja Kwantowa",8,"NAV-006-0006",1,6
+7,"Meredith","Vickers","2089-11-01","Starszy Nawigator","Warp",22,"NAV-007-0007",0,7
+8,"WALL-E","Robot","2105-06-01","Kadet","Nawigacja Gwiezdna",1,"NAV-008-0008",1,8
+9,"Sigourney","Holt","2038-04-12","Nawigator","Hiperskok",12,"NAV-009-0009",1,9
+10,"Jan","Kowalski","2180-02-28","Starszy Nawigator","Warp",21,"NAV-010-0010",1,10
+11,"Marta","Nowak","2291-04-12","Kapitan Nawigator","Nawigacja Gwiezdna",22,"NAV-901-2101",1,11
+12,"Jakub","Zieliński","2287-09-03","Starszy Nawigator","Warp",26,"NAV-902-2102",1,12
+13,"Elena","Garcia","2300-01-18","Nawigator","Hiperskok",14,"NAV-903-2103",1,13
+14,"Ivan","Petrov","2279-11-20","Admirał","Wielofazowa",35,"NAV-904-2104",0,14
+15,"Sofia","Nowacka","2312-05-25","Kadet","Nawigacja Kwantowa",3,"NAV-905-2105",1,15
+16,"Amir","Khan","2285-08-14","Nawigator","Warp",18,"NAV-906-2106",1,16
+17,"Lena","Schmidt","2294-02-09","Starszy Nawigator","Nawigacja Gwiezdna",24,"NAV-907-2107",1,17
+18,"Marco","Rossi","2288-12-30","Nawigator","Hiperskok",19,"NAV-908-2108",1,18
+19,"Aya","Nakamura","2306-03-07","Kadet","Nawigacja Kwantowa",5,"NAV-909-2109",1,19
+20,"Sara","Silva","2282-07-21","Kapitan Nawigator","Warp",30,"NAV-910-2110",1,20
+21,"Noah","Dubois","2296-10-11","Nawigator","Nawigacja Gwiezdna",16,"NAV-911-2111",1,21
+22,"Julia","Kowal","2310-06-06","Kadet","Hiperskok",4,"NAV-912-2112",1,22
+23,"Mateo","Costa","2283-01-29","Starszy Nawigator","Wielofazowa",27,"NAV-913-2113",0,23
+24,"Nadia","Singh","2299-04-17","Nawigator","Nawigacja Kwantowa",12,"NAV-914-2114",1,24
+25,"Oskar","Lewandowski","2281-09-15","Admirał","Warp",33,"NAV-915-2115",0,25
+26,"Hana","Park","2304-12-05","Kadet","Nawigacja Gwiezdna",6,"NAV-916-2116",1,26
+27,"Ravi","Patel","2278-02-23","Kapitan Nawigator","Wielofazowa",34,"NAV-917-2117",1,27
+28,"Laura","Vega","2293-07-10","Starszy Nawigator","Hiperskok",20,"NAV-918-2118",1,28
+29,"Kenji","Sato","2289-11-03","Nawigator","Nawigacja Gwiezdna",17,"NAV-919-2119",1,29
+30,"Mila","Novak","2315-08-19","Kadet","Nawigacja Kwantowa",2,"NAV-920-2120",1,30

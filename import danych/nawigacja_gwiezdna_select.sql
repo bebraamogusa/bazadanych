@@ -529,7 +529,7 @@ WHERE
     tob.id_planety = tp.id_planety AND 
     tp.id_gwiazdy = tg.id_gwiazdy AND 
     tg.id_konstelacji = tk.id_konstelacji AND 
-    tg.czy_podwójna = 1;
+    tg.czy_podwojna = 1;
 
 -- 42. Wpisy nawigacyjne ze statku "Aurora" docierającego na planetę docelową
 SELECT 

@@ -1,4 +1,36 @@
-USE nawigacja_gwiezdna;
+﻿USE nawigacja_gwiezdna;
+
+LOAD DATA INFILE '/tmp/tbl_konstelacje.csv'
+INTO TABLE tbl_konstelacje
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(id_konstelacji, nazwa, skrot, polkula, powierzchnia_sq, liczba_gwiazd, widocznosc, miesiac_najlepszy, opis);
+
+LOAD DATA INFILE '/tmp/tbl_gwiazdy.csv'
+INTO TABLE tbl_gwiazdy
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(id_gwiazdy, id_konstelacji, nazwa, oznaczenie_bayer, typ_widmowy, magnitude, odleglosc_ly, ra_deg, dec_deg, temperatura_k, masa_sloneczna, kolor, czy_podwojna, data_odkrycia);
+
+LOAD DATA INFILE '/tmp/tbl_statki_kosmiczne.csv'
+INTO TABLE tbl_statki_kosmiczne
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(id_statku, nazwa, typ, producent, rok_produkcji, max_predkosc_c, zasieg_ly, zalog_max, masa_tony, status, data_wodowania);
+
+LOAD DATA INFILE '/tmp/tbl_nawigatorzy.csv'
+INTO TABLE tbl_nawigatorzy
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(id_nawigatora, imie, nazwisko, data_urodzenia, stopien, specjalizacja, lata_doswiadczenia, certyfikat_nr, aktywny, id_statku);
 
 LOAD DATA INFILE '/tmp/tbl_planety.csv'
 INTO TABLE tbl_planety
@@ -31,7 +63,6 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
 (id_misji, nazwa, typ, id_statku, id_nawigatora, id_docelowej_planety, data_startu, data_konca, cel_x_ly, cel_y_ly, cel_z_ly, status, priorytet, wynik, budzet_PLN);
-
 
 LOAD DATA INFILE '/tmp/tbl_trasy_nawigacyjne.csv'
 INTO TABLE tbl_trasy_nawigacyjne

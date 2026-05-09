@@ -167,6 +167,14 @@ body {
   background: rgba(255, 255, 255, 0.8);
   cursor: pointer;
   transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.map-item span {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
 }
 
 .map-item:hover {
@@ -209,6 +217,10 @@ body {
 
 .legend-planet::before {
   background: var(--accent);
+}
+
+.legend-mission::before {
+  background: #c0392b;
 }
 
 .query-panel {

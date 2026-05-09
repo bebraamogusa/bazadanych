@@ -1,6 +1,26 @@
 id_misji,nazwa,typ,id_statku,id_nawigatora,id_docelowej_planety,data_startu,data_konca,cel_x_ly,cel_y_ly,cel_z_ly,status,priorytet,wynik,budzet_PLN
-1,"Ekspedycja Alpha","Eksploracja",1,1,4,"2250-01-01","2252-12-31",4.24,0,0,"W trakcie",1,"Poszukiwanie życia",500000000
-2,"Przemyt Paserów","Transport",2,2,3,"2023-05-10",NULL,5.2,1.2,0.5,"Planowana",3,NULL,150000
-3,"Odzysk Pierścienia","Ratunkowa",3,3,5,"2355-11-20","2356-02-15",860,200,-50,"Zakończona",2,"Sukces",12000000
+1,"Ekspedycja Alpha","Eksploracja",1,1,4,"2250-01-01","2252-12-31",-1.5453,-1.1827,-3.7671,"W trakcie",1,"Poszukiwanie życia",500000000
+2,"Przemyt Paserów","Transport",2,2,3,"2023-05-10",NULL,0.01,0.01,0,"Planowana",3,NULL,150000
+3,"Odzysk Pierścienia","Ratunkowa",3,3,5,"2355-11-20","2356-02-15",168.322,837.4237,-123.1186,"Zakończona",2,"Sukces",12000000
 4,"Deep Space 1","Naukowa",1,5,NULL,"2255-06-01",NULL,1500,1200,800,"Planowana",1,NULL,900000000
 5,"Kolonizacja Marsa","Transport",6,7,2,"2030-01-01",NULL,0.01,0.01,0,"W trakcie",2,NULL,25000000000
+6,"Skan Sadalmelik","Eksploracja",11,11,15,"2335-02-10","2336-01-18",507.0643,-564.7555,-4.239,"Zakończona",2,"Mapowanie orbity",420000000
+7,"Konwoj Altair","Transport",12,12,16,"2336-05-22",NULL,7.669,-14.6099,2.5744,"W trakcie",3,NULL,180000000
+8,"Obrona Hamal","Obrona",13,13,17,"2337-09-01","2338-03-14",51.4599,31.8965,26.2773,"Zakończona",4,"Stabilizacja szlaku",260000000
+9,"Badanie Capella","Naukowa",14,14,18,"2338-01-05",NULL,5.5986,29.2713,30.8586,"W trakcie",2,NULL,540000000
+10,"Ratunek Sirius","Ratunkowa",15,15,20,"2339-07-20","2339-09-02",-1.6122,8.0773,-2.4736,"Zakończona",1,"Ewakuacja zalogi",120000000
+11,"Ekspedycja Procyon","Eksploracja",16,16,21,"2340-03-11",NULL,-4.7916,10.3577,1.0436,"Planowana",2,NULL,300000000
+12,"Zwiad Deneb Algedi","Naukowa",17,17,22,"2340-10-01",NULL,31.0773,-20.9248,-10.8329,"Planowana",3,NULL,260000000
+13,"Szlak Menkar","Transport",18,18,23,"2336-12-12","2337-08-20",168.4177,140.6743,15.6911,"Zakończona",3,"Dostawy bazy",210000000
+14,"Patrol Phact","Obrona",19,19,24,"2341-05-14",NULL,19.2464,216.1633,-146.789,"W trakcie",4,NULL,350000000
+15,"Badanie Gienah","Naukowa",20,20,25,"2339-11-04","2340-04-30",-146.4893,-10.1202,-46.4163,"Zakończona",2,"Analiza atmosfery",280000000
+16,"Krotki Skok Alkes","Eksploracja",21,21,26,"2342-02-02",NULL,-160.4215,15.1248,-54.1865,"Planowana",2,NULL,190000000
+17,"Wyprawa Sualocin","Eksploracja",22,22,27,"2342-08-19","2342-11-03",147.0713,-179.124,66.0727,"Przerwana",2,"Awaria silnika warp",420000000
+18,"Konwoj Dorado","Transport",23,23,28,"2341-01-23","2341-07-11",35.4883,90.0877,-138.5128,"Zakończona",3,"Relokacja kolonii",230000000
+19,"Aurora - Rekonesans Deneb","Naukowa",19,24,9,"2343-03-06",NULL,1191.5299,-1402.124,1858.0984,"Planowana",3,NULL,720000000
+20,"Przelot Mirach c","Transport",25,25,10,"2340-04-17","2340-09-05",152.7852,47.9766,114.7341,"Zakończona",2,"Dostawy naukowe",160000000
+21,"Operacja Alnilam","Obrona",26,26,11,"2342-11-09",NULL,138.8048,1332.4951,-28.1096,"W trakcie",4,NULL,480000000
+22,"Sadr Survey","Naukowa",27,27,12,"2341-06-12","2342-01-30",675.8821,-945.5606,984.1888,"Zakończona",2,"Profil magnetosfery",510000000
+23,"Dschubba Run","Transport",28,28,13,"2338-07-07","2338-12-19",-184.1491,-320.0254,-153.8599,"Zakończona",3,"Ladunek kriogeniczny",200000000
+24,"Sol-IV Atlas","Eksploracja",29,29,14,"2344-02-14",NULL,-1.6338,-1.3662,-3.8159,"Planowana",1,NULL,95000000
+25,"Arcturus Shield","Obrona",30,30,19,"2343-09-01",NULL,-28.765,-19.3402,12.0591,"W trakcie",4,NULL,310000000

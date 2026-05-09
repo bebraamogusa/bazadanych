@@ -3,3 +3,23 @@ id_trasy,nazwa,id_misji,punkt_startowy,punkt_koncowy,dlugosc_ly,czas_podrozy_dni
 2,"Pas Asteroid",2,"Ziemia","Jowisz",0.01,350,"Impuls",10,"Średnia",1,"Gęsty ruch"
 3,"Skok Kwantowy",3,"Tycho","Eros",0.01,14,"Kwantowy",2,"Ekstremalna",0,"Niestabilne pole"
 4,"Wielka Pustka",4,"Ziemia","Sektor 001",1500,2000,"Warp",1,"Łatwa",1,"Czysta przestrzeń"
+5,"Szlak Sadalmelik",6,"Ziemia","Sadalmelik b",759.0000,1200,"Hiperprzestrzeń",7,"Trudna",0,"Silne prady"
+6,"Szlak Altair",7,"Ziemia","Altair c",16.7000,140,"Warp",4,"Średnia",1,
+7,"Tarcza Hamal",8,"Ziemia","Hamal b",66.0000,260,"Warp",5,"Średnia",1,
+8,"Capella Drift",9,"Ziemia","Capella f",42.9000,220,"Warp",5,"Średnia",1,
+9,"Sirius Rescue",10,"Ziemia","Sirius g",8.6000,90,"Warp",3,"Łatwa",1,
+10,"Procyon Trace",11,"Ziemia","Procyon b",11.4600,120,"Warp",4,"Średnia",1,
+11,"Deneb Algedi Run",12,"Ziemia","Deneb Algedi b",39.0000,210,"Warp",5,"Średnia",1,
+12,"Menkar Cargo",13,"Ziemia","Menkar b",220.0000,820,"Hiperprzestrzeń",6,"Trudna",0,
+13,"Phact Patrol",14,"Ziemia","Phact b",262.0000,900,"Hiperprzestrzeń",6,"Trudna",0,
+14,"Gienah Survey",15,"Ziemia","Gienah b",154.0000,600,"Warp",5,"Średnia",1,
+15,"Alkes Hop",16,"Ziemia","Alkes b",170.0000,680,"Warp",5,"Średnia",1,
+16,"Sualocin Reach",17,"Ziemia","Sualocin b",241.0000,880,"Hiperprzestrzeń",6,"Trudna",0,
+17,"Dorado Convoy",18,"Ziemia","Dorado b",169.0000,640,"Warp",5,"Średnia",1,
+18,"Deneb I Deep",19,"Ziemia","Deneb I",2615.0000,1800,"Hiperprzestrzeń",8,"Trudna",0,"Dluga trasa"
+19,"Mirach Corridor",20,"Ziemia","Mirach c",197.0000,700,"Warp",5,"Średnia",1,
+20,"Alnilam Guard",21,"Ziemia","Alnilam b",1340.0000,1500,"Hiperprzestrzeń",7,"Trudna",0,
+21,"Sadr Survey",22,"Ziemia","Sadr d",1523.0000,1600,"Hiperprzestrzeń",7,"Trudna",0,
+22,"Dschubba Line",23,"Ziemia","Dschubba IV",400.0000,980,"Warp",6,"Średnia",1,
+23,"Sol-IV Atlas",24,"Ziemia","Sol IV",0.1000,30,"Impuls",2,"Łatwa",1,
+24,"Arcturus Shield",25,"Ziemia","Arcturus e",36.7000,200,"Warp",4,"Średnia",1,

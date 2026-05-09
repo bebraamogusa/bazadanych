@@ -34,6 +34,7 @@ const mapView = {
   aladin: null,
   starCatalog: null,
   planetCatalog: null,
+  missionCatalog: null,
   itemByKey: new Map(),
   itemByName: new Map()
 };
@@ -153,7 +154,13 @@ function renderMapList() {
     const title = document.createElement("strong");
     title.textContent = item.name;
     const meta = document.createElement("span");
-    meta.textContent = item.kind === "star" ? "gwiazda" : "planeta";
+    if (item.kind === "star") {
+      meta.textContent = "gwiazda";
+    } else if (item.kind === "planet") {
+      meta.textContent = "planeta";
+    } else {
+      meta.textContent = "misja";
+    }
     li.append(title, meta);
     li.addEventListener("click", () => focusMapItem(item));
     fragment.appendChild(li);
@@ -169,7 +176,13 @@ function setMapInfo(item) {
   }
 
   const heading = document.createElement("strong");
-  heading.textContent = `${item.name} (${item.kind === "star" ? "gwiazda" : "planeta"})`;
+  if (item.kind === "star") {
+    heading.textContent = `${item.name} (gwiazda)`;
+  } else if (item.kind === "planet") {
+    heading.textContent = `${item.name} (planeta)`;
+  } else {
+    heading.textContent = `${item.name} (misja)`;
+  }
   mapInfoEl.appendChild(heading);
 
   const xyLine = document.createElement("div");
@@ -243,14 +256,20 @@ function startAladin() {
 
   mapView.starCatalog = A.catalog({
     name: "Gwiazdy",
-    sourceSize: 12,
+    sourceSize: 8,
     color: "#f2b447"
   });
 
   mapView.planetCatalog = A.catalog({
     name: "Planety",
-    sourceSize: 10,
+    sourceSize: 14,
     color: "#0f7c8f"
+  });
+
+  mapView.missionCatalog = A.catalog({
+    name: "Misje",
+    sourceSize: 11,
+    color: "#c0392b"
   });
 
   state.mapItems.forEach((item) => {
@@ -263,13 +282,16 @@ function startAladin() {
     mapView.itemByName.set(item.name, item);
     if (item.kind === "star") {
       mapView.starCatalog.addSources([source]);
-    } else {
+    } else if (item.kind === "planet") {
       mapView.planetCatalog.addSources([source]);
+    } else {
+      mapView.missionCatalog.addSources([source]);
     }
   });
 
   mapView.aladin.addCatalog(mapView.starCatalog);
   mapView.aladin.addCatalog(mapView.planetCatalog);
+  mapView.aladin.addCatalog(mapView.missionCatalog);
 
   if (typeof mapView.aladin.on === "function") {
     mapView.aladin.on("objectClicked", (object) => {
@@ -317,6 +339,7 @@ function pauseMap() {
   mapView.aladin = null;
   mapView.starCatalog = null;
   mapView.planetCatalog = null;
+  mapView.missionCatalog = null;
   mapView.itemByKey.clear();
   mapView.itemByName.clear();
   setMapStatus("mapa wylaczona");
@@ -377,10 +400,24 @@ async function loadQueries() {
 }
 
 async function loadSchema() {
-  const response = await fetch("/api/schema");
-  const payload = await response.json();
-  state.schema = payload;
-  renderSchema();
+  try {
+    const response = await fetch("/api/schema");
+    if (!response.ok) {
+      throw new Error("schema_failed");
+    }
+    const payload = await response.json();
+    if (!payload || !Array.isArray(payload.tables)) {
+      throw new Error("schema_invalid");
+    }
+    state.schema = payload;
+    renderSchema();
+  } catch (error) {
+    state.schema = null;
+    schemaStatsEl.textContent = "blad pobierania struktury";
+    tableListEl.innerHTML = "";
+    relationListEl.innerHTML = "";
+    columnDetailEl.textContent = "brak danych";
+  }
 }
 
 async function loadMap() {

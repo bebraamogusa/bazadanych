@@ -6,3 +6,23 @@ id_instrumentu,nazwa,typ,producent,model,rok_produkcji,dokladnosc_ly,zasieg_ly,i
 5,"Detektor Materii","Detektor","Tycho Sci","DarkEye",2348,0.000500,2500.00,3,"Uszkodzony",8500000
 6,"System T-Point","System Celowania","Donnager Arms","T-1",2349,0.000010,100.00,3,"Sprawny",500000
 7,"Skaner Kwantowy","Skaner","Alliance","Q-Scan",2510,0.000001,3000.00,5,"Sprawny",4200000
+8,"Sextant Aurora","Sextant","Optics Corp","A-3",2331,0.000004,140.00,11,"Sprawny",220000
+9,"Skaner Pulsar","Skaner","SensorTech","PX-2",2335,0.001200,1800.00,12,"Do kalibracji",1900000
+10,"Kompas Helix","Kompas","Corellia Systems","HX-7",2329,0.030000,180.00,13,"Sprawny",95000
+11,"Kalkulatr Warp Sigma","Kalkulatr Warp","Zefram Tech","S-5",2340,0.000001,5500.00,14,"Sprawny",3200000
+12,"Detektor Null","Detektor","Tycho Sci","N-1",2338,0.000700,2600.00,15,"Sprawny",4100000
+13,"System Celowania Ares","System Celowania","Donnager Arms","A-11",2342,0.000020,520.00,16,"Sprawny",780000
+14,"Skaner Horizon","Skaner","Alliance","HZ-3",2336,0.001500,2100.00,17,"Sprawny",2300000
+15,"Sextant Polaris","Sextant","Optics Corp","P-4",2341,0.000006,160.00,18,"Sprawny",250000
+16,"Kompas Vector","Kompas","Astral Instruments","V-2",2337,0.025000,200.00,19,"Do kalibracji",120000
+17,"Detektor DeepEye","Detektor","DeepSpace Labs","DE-5",2344,0.001100,2800.00,20,"Uszkodzony",5200000
+18,"Kalkulatr Warp Nova","Kalkulatr Warp","Zefram Tech","N-9",2345,0.000001,6200.00,21,"Sprawny",3600000
+19,"System Celowania Orion","System Celowania","Donnager Arms","O-6",2340,0.000015,480.00,22,"Sprawny",720000
+20,"Skaner Lumen","Skaner","NavTech","L-10",2343,0.001800,2400.00,23,"Sprawny",2600000
+21,"Kompas Drift","Kompas","Corellia Systems","D-4",2339,0.020000,170.00,24,"Sprawny",110000
+22,"Sextant Eclipse","Sextant","Optics Corp","E-2",2346,0.000005,150.00,25,"Sprawny",240000
+23,"Detektor Prism","Detektor","Tycho Sci","PR-8",2347,0.000900,3000.00,26,"Sprawny",4700000
+24,"Kalkulatr Warp Axiom","Kalkulatr Warp","Zefram Tech","AX-1",2348,0.000001,6800.00,27,"Sprawny",3900000
+25,"System Celowania Vega","System Celowania","Donnager Arms","V-3",2341,0.000018,540.00,28,"Sprawny",820000
+26,"Skaner Spectra","Skaner","SensorTech","SP-7",2342,0.001600,2500.00,29,"Do kalibracji",2750000
+27,"Kompas Zenith","Kompas","Astral Instruments","Z-9",2344,0.022000,190.00,30,"Sprawny",130000
