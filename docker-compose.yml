@@ -3,7 +3,7 @@ services:
     image: mysql:8.0
     container_name: nawigacja_db
     restart: unless-stopped
-    command: --local-infile=1
+    command: ["mysqld", "--local-infile=1", "--secure-file-priv="]
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: nawigacja_gwiezdna
