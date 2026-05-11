@@ -10,6 +10,10 @@ const CSV_DIR = process.env.CSV_DIR
   : path.resolve(__dirname, "..", "..", "import danych");
 
 const TABLES = [
+  { table: "tbl_konstelacje", file: "tbl_konstelacje.csv" },
+  { table: "tbl_gwiazdy", file: "tbl_gwiazdy.csv" },
+  { table: "tbl_statki_kosmiczne", file: "tbl_statki_kosmiczne.csv" },
+  { table: "tbl_nawigatorzy", file: "tbl_nawigatorzy.csv" },
   { table: "tbl_planety", file: "tbl_planety.csv" },
   { table: "tbl_obserwatoria", file: "tbl_obserwatoria.csv" },
   { table: "tbl_instrumenty_nawigacyjne", file: "tbl_instrumenty_nawigacyjne.csv" },
@@ -40,7 +44,7 @@ function normalizeValue(value) {
     return null;
   }
   const text = String(value).trim();
-  if (!text || text.toUpperCase() === "NULL") {
+  if (!text || text.toUpperCase() === "NULL" || text === "\\N") {
     return null;
   }
   return text;

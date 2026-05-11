@@ -240,60 +240,60 @@ function startAladin() {
     return;
   }
 
-  mapView.aladin = A.aladin("#aladin", {
-    survey: "P/DSS2/color",
-    fov: 45,
-    target: "0 +0",
-    showCooGrid: false,
-    showSimbadPointerControl: false,
-    showShareControl: false,
-    showReticle: false
-  });
+  A.init.then(() => {
+    mapView.aladin = A.aladin("#aladin", {
+      survey: "P/DSS2/color",
+      fov: 45,
+      target: "0 +0",
+      showCooGrid: false,
+      showSimbadPointerControl: false,
+      showShareControl: false,
+      showReticle: false
+    });
 
-  setMapStatus("mapa aktywna");
-  mapInitBtn.disabled = true;
-  mapStopBtn.disabled = false;
+    setMapStatus("mapa aktywna");
+    mapInitBtn.disabled = true;
+    mapStopBtn.disabled = false;
 
-  mapView.starCatalog = A.catalog({
-    name: "Gwiazdy",
-    sourceSize: 8,
-    color: "#f2b447"
-  });
+    mapView.starCatalog = A.catalog({
+      name: "Gwiazdy",
+      sourceSize: 8,
+      color: "#f2b447"
+    });
 
-  mapView.planetCatalog = A.catalog({
-    name: "Planety",
-    sourceSize: 14,
-    color: "#0f7c8f"
-  });
+    mapView.planetCatalog = A.catalog({
+      name: "Planety",
+      sourceSize: 14,
+      color: "#0f7c8f"
+    });
 
-  mapView.missionCatalog = A.catalog({
-    name: "Misje",
-    sourceSize: 11,
-    color: "#c0392b"
-  });
+    mapView.missionCatalog = A.catalog({
+      name: "Misje",
+      sourceSize: 11,
+      color: "#c0392b"
+    });
 
-  state.mapItems.forEach((item) => {
-    if (Number.isNaN(item.ra_deg) || Number.isNaN(item.dec_deg)) {
-      return;
-    }
-    const source = A.source(item.ra_deg, item.dec_deg, { name: item.name });
-    source.data = item;
-    mapView.itemByKey.set(mapKey(item), item);
-    mapView.itemByName.set(item.name, item);
-    if (item.kind === "star") {
-      mapView.starCatalog.addSources([source]);
-    } else if (item.kind === "planet") {
-      mapView.planetCatalog.addSources([source]);
-    } else {
-      mapView.missionCatalog.addSources([source]);
-    }
-  });
+    state.mapItems.forEach((item) => {
+      if (Number.isNaN(item.ra_deg) || Number.isNaN(item.dec_deg)) {
+        return;
+      }
+      const source = A.source(item.ra_deg, item.dec_deg, { name: item.name });
+      source.data = item;
+      mapView.itemByKey.set(mapKey(item), item);
+      mapView.itemByName.set(item.name, item);
+      if (item.kind === "star") {
+        mapView.starCatalog.addSources([source]);
+      } else if (item.kind === "planet") {
+        mapView.planetCatalog.addSources([source]);
+      } else {
+        mapView.missionCatalog.addSources([source]);
+      }
+    });
 
-  mapView.aladin.addCatalog(mapView.starCatalog);
-  mapView.aladin.addCatalog(mapView.planetCatalog);
-  mapView.aladin.addCatalog(mapView.missionCatalog);
+    mapView.aladin.addCatalog(mapView.starCatalog);
+    mapView.aladin.addCatalog(mapView.planetCatalog);
+    mapView.aladin.addCatalog(mapView.missionCatalog);
 
-  if (typeof mapView.aladin.on === "function") {
     mapView.aladin.on("objectClicked", (object) => {
       if (object && object.data) {
         focusMapItem(object.data);
@@ -303,7 +303,7 @@ function startAladin() {
         focusMapItem(mapView.itemByName.get(object.name));
       }
     });
-  }
+  });
 }
 
 function initMap() {
@@ -318,8 +318,8 @@ function initMap() {
     startAladin();
   };
 
-  if (window.A && window.A.init && typeof window.A.init.then === "function") {
-    window.A.init.then(start);
+  if (window.A && window.A.init) {
+    start();
     return;
   }
 
@@ -334,8 +334,12 @@ function pauseMap() {
   if (!mapView.aladin) {
     return;
   }
-  const mapEl = document.getElementById("aladin");
-  mapEl.innerHTML = "";
+  if (typeof mapView.aladin.destroy === "function") {
+    mapView.aladin.destroy();
+  } else {
+    const mapEl = document.getElementById("aladin");
+    mapEl.innerHTML = "";
+  }
   mapView.aladin = null;
   mapView.starCatalog = null;
   mapView.planetCatalog = null;
