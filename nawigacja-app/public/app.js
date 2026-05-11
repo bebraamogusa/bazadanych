@@ -240,7 +240,7 @@ function startAladin() {
     return;
   }
 
-  A.init.then(() => {
+  const createAladin = () => {
     mapView.aladin = A.aladin("#aladin", {
       survey: "P/DSS2/color",
       fov: 45,
@@ -303,7 +303,15 @@ function startAladin() {
         focusMapItem(mapView.itemByName.get(object.name));
       }
     });
-  });
+  };
+
+  if (A.init && typeof A.init.then === "function") {
+    A.init.then(createAladin);
+  } else if (typeof A.init === "function") {
+    A.init(createAladin);
+  } else {
+    createAladin();
+  }
 }
 
 function initMap() {
@@ -318,7 +326,7 @@ function initMap() {
     startAladin();
   };
 
-  if (window.A && window.A.init) {
+  if (window.A) {
     start();
     return;
   }
