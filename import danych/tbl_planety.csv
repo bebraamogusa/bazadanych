@@ -20,9 +20,9 @@ id_planety,id_gwiazdy,nazwa,typ,masa_ziemska,srednica_km,okres_orbitalny_dni,lic
 19,20,"TRAPPIST-1f","Skalista",1.0300,13200,9.20,0,-54.00,"Nieznana",1,2017
 20,20,"TRAPPIST-1g","Lodowy olbrzym",1.2300,14300,12.40,0,-76.00,"Nieznana",0,2017
 21,21,"Tau Ceti e","Skalista",3.9000,17000,168.12,0,68.00,"Nieznana",1,2012
-22,21,"Tau Ceti f","Superziemia",6.6000,21000,642.00,0,-2.00,"Nieznana",1,2012
-23,22,"Sirius b","Biały karzeł",1020.0000,11800,0.00,0,25000.00,"Brak",0,1862
-24,23,"Procyon b","Biały karzeł",660.0000,17000,0.00,0,7700.00,"Brak",0,1896
+22,21,"Tau Ceti f","Skalista",6.6000,21000,642.00,0,-2.00,"Nieznana",1,2012
+23,22,"Sirius b","Karłowata",1020.0000,11800,0.00,0,25000.00,"Brak",0,1862
+24,23,"Procyon b","Karłowata",660.0000,17000,0.00,0,7700.00,"Brak",0,1896
 25,25,"Menkar b","Gazowy olbrzym",260.0000,145000,4200.00,15,-140.00,"Wodór, Hel",0,2019
 26,27,"Gienah b","Skalista",2.1000,13000,75.00,0,25.00,"Azot, Tlen",1,2020
 27,31,"Achernar b","Gazowy olbrzym",140.0000,110000,1800.00,9,-115.00,"Wodór, Hel",0,2024
