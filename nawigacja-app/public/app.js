@@ -476,26 +476,6 @@ async function init() {
   if (state.queries.length) {
     runQuery(state.queries[0].id);
   }
-  startFpsLogger();
 }
 
 init();
-
-function startFpsLogger() {
-  let last = performance.now();
-  let frames = 0;
-
-  const tick = (now) => {
-    frames += 1;
-    const delta = now - last;
-    if (delta >= 1000) {
-      const fps = Math.round((frames * 1000) / delta);
-      console.log(`fps: ${fps}`);
-      frames = 0;
-      last = now;
-    }
-    requestAnimationFrame(tick);
-  };
-
-  requestAnimationFrame(tick);
-}
